@@ -21,7 +21,7 @@ $(document).ready(function() {
             } else {
                 neutral++;
             }
-            $("#tweets").append(`<p>${t.text}</p>`);
+            $("#tweets").append(`<div><p>${t.text}</p></div>`);
         }
         $('#data').prepend(`<h1 id = "count">Tweets collected: ${tweets.length}</h1>`);
 
