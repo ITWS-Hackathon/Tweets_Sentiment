@@ -23,12 +23,16 @@ $(document).ready(function() {
             }
             $("#tweets").append(`<p>${t.text}</p>`);
         }
-        $('#data').append(`<h1>Tweets collected: ${tweets.length}</h1>`);
-        
+        $('#data').prepend(`<h1 id = "count">Tweets collected: ${tweets.length}</h1>`);
+
         const percentage_neg = negative/tweets.length;
         const percentage_pos = postive/tweets.length;
         const percentage_neu = neutral/tweets.length;
 
+        $('#percentage').append(`<td style="--size: calc( ${percentage_neg} / 1 ); --color: rgba(230, 30, 30, 0.5);"> ${percentage_neg} </td>`);
+        $('#percentage').append(`<td style="--size: calc( ${percentage_pos} / 1 ); --color: rgba(0,255,0,0.5);"> ${percentage_pos} </td>`);
+        $('#percentage').append(`<td style="--size: calc( ${percentage_neu} / 1 ); --color: rgba(0,0,255,0.3);"> ${percentage_neu} </td>`);
+        
         console.log(percentage_neu, percentage_neg, percentage_pos);
     })();
     
