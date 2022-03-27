@@ -62,6 +62,10 @@ app.get("/allTweets", (req, res) => {
     })();
     
 })
+app.get("/keywordSearch", (res, req) => {
+
+})
+
 
 app.listen(port, () => {
 	console.log('Listening on *:3000');
