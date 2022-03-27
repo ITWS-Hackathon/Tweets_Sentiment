@@ -1,0 +1,8 @@
+#data {
+    margin:auto;
+}
+
+#tweets {
+    height: 70%;
+    overflow-y: scroll;
+}
