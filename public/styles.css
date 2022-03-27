@@ -3,6 +3,38 @@
 }
 
 #tweets {
-    height: 70%;
-    overflow-y: scroll;
+    width: 70%;
+    height: 30em;
+    overflow-x: auto;
+    overflow-y: hidden scroll;
 }
+
+#tweets p {
+    margin:0.5em;
+}
+
+#tweets div {
+    border: 1px black solid;
+    border-radius: 15px;
+    margin-bottom: 1em;
+}
+/* width */
+#tweets::-webkit-scrollbar {
+    width: 10px;
+    height: 30px;
+  }
+  
+  /* Track */
+  #tweets::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  #tweets::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  #tweets::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
