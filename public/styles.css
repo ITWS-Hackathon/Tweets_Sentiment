@@ -10,12 +10,21 @@
 }
 
 #tweets p {
-    margin:0.5em;
-}
-
-#tweets div {
-    border: 1px black solid;
     border-radius: 15px;
+    margin-bottom: 0;
+    padding:0.5em;
+    /* background-color: rgba(170, 255, 170, 0.712); */
+}
+.pos {
+
+}
+.neg {
+
+}
+.neu{
+
+}
+#tweets div {
     margin-bottom: 1em;
 }
 /* width */
