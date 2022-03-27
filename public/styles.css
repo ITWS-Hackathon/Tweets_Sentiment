@@ -1,8 +1,23 @@
 #data {
+    display: flex;
     margin:auto;
 }
 
 #tweets {
     height: 70%;
     overflow-y: scroll;
+}
+
+#my-chart.bar {
+    /* border-left: 50px; */
+    float: right;
+    height: 150px;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+#count {
+    margin-right: 100px;
+    float: left;
+    width: 600px;
 }
