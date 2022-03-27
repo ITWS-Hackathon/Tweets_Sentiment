@@ -14,14 +14,18 @@ $(document).ready(function() {
         var postive = 0;
 
         for (const t of tweets) {
+            var color;
             if (t.sentiment_score > 0) {
+                color = "pos";
                 postive++;
             } else if (t.sentiment_score < 0) {
+                color = "neg";
                 negative++;
             } else {
+                color = "neu";
                 neutral++;
             }
-            $("#tweets").append(`<div><p>${t.text}</p></div>`);
+            $("#tweets").append(`<div><p class="${color}">${t.text}</p></div>`);
         }
         $('#data').prepend(`<h1 id = "count">Tweets collected: ${tweets.length}</h1>`);
 
@@ -29,9 +33,9 @@ $(document).ready(function() {
         const percentage_pos = postive/tweets.length;
         const percentage_neu = neutral/tweets.length;
 
-        $('#percentage').append(`<td style="--size: calc( ${percentage_neg} / 1 ); --color: rgba(230, 30, 30, 0.5);"> ${percentage_neg} </td>`);
-        $('#percentage').append(`<td style="--size: calc( ${percentage_pos} / 1 ); --color: rgba(0,255,0,0.5);"> ${percentage_pos} </td>`);
-        $('#percentage').append(`<td style="--size: calc( ${percentage_neu} / 1 ); --color: rgba(0,0,255,0.3);"> ${percentage_neu} </td>`);
+        $('#percentage').append(`<tr><th scope='column'>Negative: </th><td style="--size: calc( ${percentage_neg} / 1 ); --color: rgba(230, 30, 30, 0.5);"> ${percentage_neg} </td></tr>`);
+        $('#percentage').append(`<tr><th scope='column'>Positive: </th><td style="--size: calc( ${percentage_pos} / 1 ); --color: rgba(0,255,0,0.5);"> ${percentage_pos} </td></tr>`);
+        $('#percentage').append(`<tr><th scope='column'>Neutral: </th><td style="--size: calc( ${percentage_neu} / 1 ); --color: rgba(0,0,255,0.3);"> ${percentage_neu} </td></tr>`);
         
         console.log(percentage_neu, percentage_neg, percentage_pos);
     })();

@@ -1,6 +1,10 @@
 #data {
     display: flex;
+    flex-direction: row;
     margin:auto;
+    align-items: center;
+    width: 70%;
+    margin-bottom: 1em;
 }
 
 #tweets {
@@ -14,16 +18,15 @@
     border-radius: 15px;
     margin-bottom: 0;
     padding:0.5em;
-    /* background-color: rgba(170, 255, 170, 0.712); */
 }
 .pos {
-
+    background-color: rgba(0,255,0,0.5);
 }
 .neg {
-
+    background-color: rgba(230, 30, 30, 0.5);
 }
 .neu{
-
+    background-color: rgba(0,0,255,0.3);;
 }
 #tweets div {
     margin-bottom: 1em;
@@ -48,20 +51,13 @@
   #tweets::-webkit-scrollbar-thumb:hover {
     background: #555; 
   }
-    height: 70%;
-    overflow-y: scroll;
-}
+
 
 #my-chart.bar {
     /* border-left: 50px; */
-    float: right;
+    /* float: right; */
     height: 150px;
     max-width: 300px;
     margin: 0 auto;
   }
 
-#count {
-    margin-right: 100px;
-    float: left;
-    width: 600px;
-}
